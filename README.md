@@ -414,12 +414,7 @@ npm run preview
 
 ---
 
-## 🌐 Browser Support
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
 
 ### Required Features
 - CSS Grid & Flexbox
@@ -457,16 +452,7 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 ---
 
-## 📊 Project Stats
 
-- **Total Pages**: 12
-- **Components**: 15+
-- **Lines of Code**: 5000+
-- **Dependencies**: 20+
-- **Build Size**: ~500KB (gzipped)
-- **Performance**: ⚡ Lightning fast
-
----
 
 <div align="center">
 
