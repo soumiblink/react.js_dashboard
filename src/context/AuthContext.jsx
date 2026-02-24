@@ -13,12 +13,25 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const login = (username, password) => {
+    // Check demo account
     if (username === 'testuser' && password === 'Test123') {
       localStorage.setItem('authToken', 'authenticated')
       localStorage.setItem('username', username)
       setIsAuthenticated(true)
       return true
     }
+
+    // Check registered users
+    const users = JSON.parse(localStorage.getItem('registeredUsers') || '[]')
+    const user = users.find(u => u.username === username && u.password === password)
+
+    if (user) {
+      localStorage.setItem('authToken', 'authenticated')
+      localStorage.setItem('username', username)
+      setIsAuthenticated(true)
+      return true
+    }
+
     return false
   }
 

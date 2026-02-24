@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { Lock, User, AlertCircle } from 'lucide-react'
 
@@ -94,8 +94,16 @@ const Login = () => {
             </button>
           </form>
 
-          <div className="pt-4 border-t border-neutral-800 text-center text-sm text-neutral-500">
-            Demo: testuser / Test123
+          <div className="pt-4 border-t border-neutral-800 text-center">
+            <p className="text-sm text-neutral-500 mb-3">
+              Don't have an account?{' '}
+              <Link to="/register" className="text-indigo-400 hover:text-indigo-300 font-medium transition-colors">
+                Create one
+              </Link>
+            </p>
+            <p className="text-xs text-neutral-600">
+              Demo: testuser / Test123
+            </p>
           </div>
         </div>
       </div>
