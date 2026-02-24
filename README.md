@@ -10,7 +10,7 @@
 
 **A premium, production-grade employee management system with stunning UI and comprehensive features**
 
-[Features](#features) • [Demo](#demo) • [Installation](#installation) • [Usage](#usage) • [Tech Stack](#tech-stack)
+
 
 </div>
 
