@@ -15,13 +15,13 @@ const Charts = () => {
     try {
       setLoading(true)
       const data = await employeeService.getEmployees()
-      // Ensure data is an array
+      
       const apiEmployees = Array.isArray(data) ? data : (data?.data || [])
       
-      // Get locally added employees
+    
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       
-      // Combine both
+      
       const allEmployees = [...localEmployees, ...apiEmployees]
       
       const top10 = allEmployees.slice(0, 10).map((emp) => ({
@@ -31,7 +31,7 @@ const Charts = () => {
       setChartData(top10)
     } catch (error) {
       console.error('Failed to fetch chart data:', error)
-      // Even if API fails, show local employees
+      
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       const top10 = localEmployees.slice(0, 10).map((emp) => ({
         name: emp.name || 'N/A',

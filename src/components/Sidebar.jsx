@@ -25,7 +25,7 @@ const Sidebar = () => {
 
   return (
     <aside className="w-64 bg-gradient-to-b from-neutral-900 to-neutral-950 border-r border-neutral-800/50 flex flex-col relative overflow-hidden">
-      {/* Animated background gradient */}
+      
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 animate-gradient"></div>
       
       <div className="relative z-10">
@@ -61,7 +61,7 @@ const Sidebar = () => {
           ))}
         </nav>
         
-        {/* Decorative element at bottom */}
+        
         <div className="p-4 border-t border-neutral-800/50">
           <div className="p-4 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
             <p className="text-xs text-neutral-400 mb-1">Need help?</p>

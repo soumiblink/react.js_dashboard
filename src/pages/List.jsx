@@ -34,10 +34,10 @@ const List = () => {
       // Ensure data is an array
       const apiEmployees = Array.isArray(data) ? data : (data?.data || [])
       
-      // Get locally added employees
+      
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       
-      // Combine both (local employees first)
+      
       const allEmployees = [...localEmployees, ...apiEmployees]
       
       setEmployees(allEmployees)
@@ -62,16 +62,16 @@ const List = () => {
     e.stopPropagation() // Prevent navigation when clicking delete
     
     if (confirm('Are you sure you want to delete this employee?')) {
-      // Get local employees
+     
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       
-      // Filter out the deleted employee
+     
       const updatedEmployees = localEmployees.filter(emp => emp.id !== employeeId)
       
-      // Save back to localStorage
+    
       localStorage.setItem('localEmployees', JSON.stringify(updatedEmployees))
       
-      // Refresh the list
+      
       fetchEmployees()
     }
   }

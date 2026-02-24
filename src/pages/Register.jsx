@@ -45,29 +45,29 @@ const Register = () => {
       return
     }
 
-    // Email validation
+   
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(formData.email)) {
       setError('Please enter a valid email address')
       return
     }
 
-    // Get existing users
+   
     const users = JSON.parse(localStorage.getItem('registeredUsers') || '[]')
 
-    // Check if username already exists
+    
     if (users.some(user => user.username === formData.username)) {
       setError('Username already exists')
       return
     }
 
-    // Check if email already exists
+   
     if (users.some(user => user.email === formData.email)) {
       setError('Email already registered')
       return
     }
 
-    // Add new user
+    
     const newUser = {
       username: formData.username,
       email: formData.email,
@@ -78,10 +78,10 @@ const Register = () => {
     users.push(newUser)
     localStorage.setItem('registeredUsers', JSON.stringify(users))
 
-    // Show success message
+    
     setSuccess(true)
 
-    // Redirect to login after 2 seconds
+    
     setTimeout(() => {
       navigate('/login')
     }, 2000)

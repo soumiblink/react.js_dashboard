@@ -23,7 +23,7 @@ const Settings = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-6">
-        {/* Profile Settings */}
+       
         <div className="card-premium p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
@@ -54,7 +54,7 @@ const Settings = () => {
           </div>
         </div>
 
-        {/* Notification Settings */}
+        
         <div className="card-premium p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
@@ -80,7 +80,7 @@ const Settings = () => {
           </div>
         </div>
 
-        {/* Appearance */}
+        
         <div className="card-premium p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
@@ -104,7 +104,7 @@ const Settings = () => {
           </div>
         </div>
 
-        {/* Security */}
+       
         <div className="card-premium p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
@@ -118,7 +118,7 @@ const Settings = () => {
           </button>
         </div>
 
-        {/* Save Button */}
+        
         <button
           onClick={handleSave}
           className="w-full py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 flex items-center justify-center gap-2"

@@ -35,7 +35,7 @@ const Dashboard = () => {
         localEmployees: localEmployees.length,
       })
 
-      // Get recent employees (local employees + first 4 from API)
+      
       const recent = [...localEmployees, ...apiEmployees].slice(0, 4)
       setRecentEmployees(recent)
     } catch (error) {
@@ -99,7 +99,7 @@ const Dashboard = () => {
             key={index}
             className="card-premium p-6 card-hover cursor-pointer group relative overflow-hidden"
           >
-            {/* Animated gradient overlay */}
+          
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:to-purple-500/10 transition-all duration-500"></div>
             
             <div className="relative z-10">

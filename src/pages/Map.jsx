@@ -4,7 +4,7 @@ import { employeeService } from '../services/api'
 import { Loader2 } from 'lucide-react'
 import L from 'leaflet'
 
-// Fix for default marker icon
+
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -27,16 +27,16 @@ const Map = () => {
       // Ensure data is an array
       const apiEmployees = Array.isArray(data) ? data : (data?.data || [])
       
-      // Get locally added employees
+      
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       
-      // Combine both
+     
       const allEmployees = [...localEmployees, ...apiEmployees]
       
       setEmployees(allEmployees)
     } catch (error) {
       console.error('Failed to fetch employees:', error)
-      // Even if API fails, show local employees
+     
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       setEmployees(localEmployees)
     } finally {
@@ -44,7 +44,7 @@ const Map = () => {
     }
   }
 
-  // Mock coordinates for cities (in real app, use geocoding API)
+  
   const getCityCoordinates = (city) => {
     const coordinates = {
       'New York': [40.7128, -74.0060],

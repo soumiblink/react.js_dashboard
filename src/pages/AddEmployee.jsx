@@ -23,26 +23,26 @@ const AddEmployee = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // Get existing employees from localStorage
+    
     const existingEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
     
-    // Create new employee with unique ID
+    
     const newEmployee = {
       id: Date.now().toString(),
       ...formData,
-      isLocal: true, // Flag to identify locally added employees
+      isLocal: true, 
     }
     
     // Add to array
     const updatedEmployees = [newEmployee, ...existingEmployees]
     
-    // Save to localStorage
+    
     localStorage.setItem('localEmployees', JSON.stringify(updatedEmployees))
     
-    // Show success message
+    
     alert(`Employee "${formData.name}" added successfully!`)
     
-    // Navigate to list
+   
     navigate('/list')
   }
 

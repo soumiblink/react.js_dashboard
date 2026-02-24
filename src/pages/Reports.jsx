@@ -20,18 +20,18 @@ const Reports = () => {
     try {
       setLoading(true)
       const data = await employeeService.getEmployees()
-      // Ensure data is an array
+     
       const apiEmployees = Array.isArray(data) ? data : (data?.data || [])
       
-      // Get locally added employees
+      
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       
-      // Combine both
+     
       const allEmployees = [...localEmployees, ...apiEmployees]
       
       setEmployees(allEmployees)
       
-      // Calculate statistics
+      
       const total = allEmployees.length
       const totalSalary = allEmployees.reduce((sum, emp) => sum + (parseInt(emp.salary) || 0), 0)
       const avgSalary = total > 0 ? Math.round(totalSalary / total) : 0
@@ -40,7 +40,7 @@ const Reports = () => {
       setStats({ total, avgSalary, totalSalary, cities })
     } catch (error) {
       console.error('Failed to fetch data:', error)
-      // Even if API fails, show local employees
+      
       const localEmployees = JSON.parse(localStorage.getItem('localEmployees') || '[]')
       setEmployees(localEmployees)
       
