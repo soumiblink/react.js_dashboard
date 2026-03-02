@@ -12,6 +12,7 @@ import Map from './pages/Map'
 import Settings from './pages/Settings'
 import AddEmployee from './pages/AddEmployee'
 import Reports from './pages/Reports'
+import ApiTest from './pages/ApiTest'
 import DashboardLayout from './layouts/DashboardLayout'
 
 function ProtectedRoute({ children }) {
@@ -33,6 +34,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/api-test" element={<ApiTest />} />
       <Route
         path="/"
         element={
